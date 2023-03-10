@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+body {
+    margin: 0 auto;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+    background-color: #debb5c;
+}
+
+input {
+    appearance: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.accordeon {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 1.25em;
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25em 0;
+    border-bottom: 0.1em solid #000000;
+    align-items: center;
+    row-gap: 1em;
+}
+
+.slide-text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    position: relative;
+    padding: 2em 6em 2em 1em;
+    border: 0.1em solid #debb5c;
+    box-shadow: 0em 0em 0.2em 0.1em #debb5c;
+}
+
+label::before {
+    content: url('./assets/png/plus_icon.png');
+    float: right;
+    position: absolute;
+    top: 25%;
+    right: 2%;
+}
