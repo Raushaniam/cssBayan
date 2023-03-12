@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+body {
+    margin: 0 auto;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+    background-color: #debb5c;
+}
+
+input {
+    appearance: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.accordeon {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 1.25em;
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25em 0;
+    border-bottom: 0.1em solid #000000;
+    align-items: center;
+    row-gap: 1em;
+}
+
+.slide-text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    position: relative;
+    padding: 2em 6em 2em 1em;
+    border: 0.1em solid #debb5c;
+    box-shadow: 0em 0em 0.2em 0.1em #debb5c;
+}
+.slide, label {
+    cursor: pointer;
+}
+
+.slide-img {
+    display: none;
+}
+
+label::before {
+    content: url('./assets/png/plus_icon.png');
+    float: right;
+    position: absolute;
+    top: 25%;
+    right: 2%;
+}
+
+.slide, input:checked + label {
+
+}
+
+input:checked + label::before {
+    content: url('./assets/png/cross_icon.png');
+    float: right;
+    position: absolute;
+    top: 25%;
+    right: 2%;
+    transition: content .35s;
+}
+
+.slide-img + input:checked {
+    display: block;
+}
+
+@media screen and (max-width: 1920px), screen and (max-height: 1080px) {
+    .slide:hover, label:hover {
+        color: #5e4a0f
+    }
+
+    .checked {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 821px), screen and (max-height: 1180px) {
+    html,
+    body {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 321px),
+screen and (max-height: 568px) {
+    html,
+    body {
+        font-size: 1em;
+    }
+}
